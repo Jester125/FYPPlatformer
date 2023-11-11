@@ -10,7 +10,7 @@ public class AttackHit : MonoBehaviour
 {
     private enum AttacksWhat { EnemyBase, NewPlayer };
     [SerializeField] private AttacksWhat attacksWhat;
-    [SerializeField] private bool oneHitKill;
+    [SerializeField] private bool oneHitKill = true;
     [SerializeField] private float startCollisionDelay; //Some enemy types, like EnemyBombs, should not be able blow up until a set amount of time
     private int targetSide = 1; //Is the attack target on the left or right side of this object?
     [SerializeField] private GameObject parent; //This must be specified manually, as some objects will have a parent that is several layers higher
@@ -45,7 +45,7 @@ public class AttackHit : MonoBehaviour
             if (col.GetComponent<NewPlayer>() != null)
             {
                 NewPlayer.Instance.GetHurt(targetSide, hitPower);
-                if (isBomb) transform.parent.GetComponent<EnemyBase>().Die(); 
+                if (isBomb) transform.parent.GetComponent<EnemyBase>().Die();
             }
         }
 

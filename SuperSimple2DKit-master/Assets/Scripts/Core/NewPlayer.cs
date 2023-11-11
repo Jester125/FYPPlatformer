@@ -36,6 +36,7 @@ public class NewPlayer : PhysicsObject
     }
 
     [Header("Properties")]
+    
     [SerializeField] private string[] cheatItems;
     public bool dead = false;
     public bool frozen = false;
@@ -46,9 +47,11 @@ public class NewPlayer : PhysicsObject
     [SerializeField] Vector2 hurtLaunchPower; //How much force should be applied to the player when getting hurt?
     private float launch; //The float added to x and y moveSpeed. This is set with hurtLaunchPower, and is always brought back to zero
     [SerializeField] private float launchRecovery; //How slow should recovering from the launch be? (Higher the number, the longer the launch will last)
-    public float maxSpeed = 7; //Max move speed
+    public float maxSpeed = 15; //Max move speed
     public float jumpPower = 17;
     private bool jumping;
+    public double speed = 1.0f;
+    public bool moving; 
     private Vector3 origLocalScale;
     [System.NonSerialized] public bool pounded;
     [System.NonSerialized] public bool pounding;
@@ -85,6 +88,7 @@ public class NewPlayer : PhysicsObject
         animatorFunctions = GetComponent<AnimatorFunctions>();
         origLocalScale = transform.localScale;
         recoveryCounter = GetComponent<RecoveryCounter>();
+        speed = 1.0;
         
         //Find all sprites so we can hide them when the player dies.
         graphicSprites = GetComponentsInChildren<SpriteRenderer>();
@@ -115,12 +119,39 @@ public class NewPlayer : PhysicsObject
         if (!frozen)
         {
             move.x = Input.GetAxis("Horizontal") + launch;
+            
 
             if (Input.GetButtonDown("Jump") && animator.GetBool("grounded") == true && !jumping)
             {
                 animator.SetBool("pounded", false);
                 Jump(1f);
             }
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                moving = true;
+            }
+            if (Input.GetKeyUp(KeyCode.D))
+            {
+                moving = false;
+            }
+            if (moving)
+            {
+                speed += 0.0007;
+                Debug.Log(speed);
+                //Debug.Log("More");
+            }
+            if (moving == false && speed >= 1)
+            {
+                speed -= 0.005;
+                Debug.Log(speed);
+            }
+            
+            //if (Input.GetButtonDown("d") && !jumping)
+            //{
+            //    speed += 0.001;
+
+            //}
+
 
             //Flip the graphic's localScale
             if (move.x > 0.01f)
@@ -171,14 +202,14 @@ public class NewPlayer : PhysicsObject
                 fallForgivenessCounter = 0;
                 animator.SetBool("grounded", true);
             }
-
+            
             //Set each animator float, bool, and trigger to it knows which animation to fire
-            animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
+            animator.SetFloat("velocityX", Mathf.Abs(velocity.x * (float)speed) / maxSpeed);
             animator.SetFloat("velocityY", velocity.y);
             animator.SetInteger("attackDirectionY", (int)Input.GetAxis("VerticalDirection"));
             animator.SetInteger("moveDirection", (int)Input.GetAxis("HorizontalDirection"));
             animator.SetBool("hasChair", GameManager.Instance.inventory.ContainsKey("chair"));
-            targetVelocity = move * maxSpeed;
+            targetVelocity = move * maxSpeed * (float)speed;
 
 
 

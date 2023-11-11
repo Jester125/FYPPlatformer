@@ -15,6 +15,7 @@ public class CameraEffects : MonoBehaviour
     [Range(0, 10)]
     [System.NonSerialized] public float shakeLength = 10;
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
+    
 
     void Start()
     {

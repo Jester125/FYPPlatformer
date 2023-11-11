@@ -52,10 +52,10 @@ public class Breakable : MonoBehaviour
                 health -= 1;
                 animator.SetTrigger("hit");
 
-                if (health <= 0)
-                {
+                //if (health <= 0)
+                //{
                     Die();
-                }
+                //}
             }
         }
     }
