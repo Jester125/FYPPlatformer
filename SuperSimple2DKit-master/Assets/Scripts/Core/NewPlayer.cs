@@ -129,20 +129,23 @@ public class NewPlayer : PhysicsObject
             if (Input.GetKeyDown(KeyCode.D))
             {
                 moving = true;
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RunVol", 1f);
+                
             }
             if (Input.GetKeyUp(KeyCode.D))
             {
                 moving = false;
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RunVol", 0f);
             }
-            if (moving)
+            if (moving && speed <= 4.5)
             {
-                speed += 0.0007;
+                speed += 0.0006;
                 Debug.Log(speed);
                 //Debug.Log("More");
             }
             if (moving == false && speed >= 1)
             {
-                speed -= 0.005;
+                speed -= 0.004;
                 Debug.Log(speed);
             }
             
