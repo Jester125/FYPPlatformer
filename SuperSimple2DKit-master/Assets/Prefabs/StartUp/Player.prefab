@@ -505,6 +505,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 40b837875a63d406e8174d3d4c61c86e, type: 3}
   outOfAmmoSound: {fileID: 8300000, guid: a7ec378dfd4c942a298621e7cfcdad7d, type: 3}
   stepSound: {fileID: 8300000, guid: 27e58179389da43abaf2aa220d014dc1, type: 3}
+  BreakLPF: 1
+  musicScript: {fileID: 0}
 --- !u!114 &114605294594294438
 MonoBehaviour:
   m_ObjectHideFlags: 0

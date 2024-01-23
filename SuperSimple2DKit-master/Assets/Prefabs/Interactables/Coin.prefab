@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 114798033220027152}
   - component: {fileID: 82740274442362448}
   - component: {fileID: 114332562018588612}
+  - component: {fileID: -3426927064402332356}
+  - component: {fileID: 2986685963151529251}
   m_Layer: 13
   m_Name: Coin
   m_TagString: Untagged
@@ -31,6 +33,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.586013, y: -1.195187, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4849546616006642}
   m_Father: {fileID: 0}
@@ -53,6 +56,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -67,6 +76,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: d562ee1c0f52b41d8a3704cc9d68eec8, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -95,10 +123,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00585e398033247af958235b57925db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceSound: {fileID: 8300000, guid: 6f158957132d344eaaef9d19f81635eb, type: 3}
   audioSource: {fileID: 82740274442362448}
-  launchOnStart: 0
+  bounceSound: {fileID: 8300000, guid: 6f158957132d344eaaef9d19f81635eb, type: 3}
   collectableTrigger: {fileID: 61441269642897126}
+  launchOnStart: 0
 --- !u!82 &82740274442362448
 AudioSource:
   m_ObjectHideFlags: 0
@@ -112,7 +140,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 23e066003c7024cc6866ee389e349a12, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.13
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -214,6 +242,49 @@ MonoBehaviour:
   volume: 0
   distanceBetweenPlayer: {x: 0, y: 0, z: 0}
   magnitude: 0
+--- !u!114 &-3426927064402332356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242977877433484}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  EventReference:
+    Guid:
+      Data1: -1593014881
+      Data2: 1329330261
+      Data3: -314359929
+      Data4: 21972454
+    Path: event:/Motifs/Motifs
+  Event: 
+  PlayEvent: 5
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &2986685963151529251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242977877433484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78990bd008c84468ea41e0a71a4a781d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1439237074007162
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,6 +316,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.77715, y: 0.77715, z: 0.77715}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4936311683882626}
   - {fileID: 4119524408509958}
@@ -262,10 +334,12 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -311,6 +385,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -340,13 +433,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: 1
+  audioSource: {fileID: 0}
+  bounceSound: {fileID: 8300000, guid: 4606c2e00ff414c58b47cffcae0c3a4e, type: 3}
   collectSounds:
   - {fileID: 8300000, guid: 547ff3e60e7034deab642a204a1443d5, type: 3}
-  bounceSound: {fileID: 8300000, guid: 4606c2e00ff414c58b47cffcae0c3a4e, type: 3}
-  audioSource: {fileID: 0}
-  itemName: 
   itemAmount: 1
-  image: {fileID: 0}
+  itemName: 
+  UIImage: {fileID: 0}
 --- !u!82 &82676315453445592
 AudioSource:
   m_ObjectHideFlags: 0
@@ -446,7 +539,7 @@ AudioSource:
     m_RotationOrder: 4
 --- !u!95 &95033323713440912
 Animator:
-  serializedVersion: 3
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -459,10 +552,12 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1450440028710878
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,6 +586,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: 0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.2867529, y: 1.2867529, z: 1.2867529}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4849546616006642}
   m_RootOrder: 1
@@ -506,10 +602,12 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -586,6 +684,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.2867529, y: 1.2867529, z: 1.2867529}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4849546616006642}
   m_RootOrder: 0
@@ -601,10 +700,12 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:

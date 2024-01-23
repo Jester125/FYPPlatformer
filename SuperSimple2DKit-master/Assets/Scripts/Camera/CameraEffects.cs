@@ -15,6 +15,7 @@ public class CameraEffects : MonoBehaviour
     [Range(0, 10)]
     [System.NonSerialized] public float shakeLength = 10;
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
+    public NewPlayer playerScript;
     
 
     void Start()
@@ -35,11 +36,14 @@ public class CameraEffects : MonoBehaviour
     void Update()
     {
         multiChannelPerlin.m_FrequencyGain += (0 - multiChannelPerlin.m_FrequencyGain) * Time.deltaTime * (10 - shakeLength);
+        //Debug.Log(NewPlayer.Instance.speed);
+        virtualCamera.m_Lens.OrthographicSize = (float)10 * (float)NewPlayer.Instance.speed;
     }
 
     public void Shake(float shake, float length)
     {
         shakeLength = length;
         multiChannelPerlin.m_FrequencyGain = shake;
+       
     }
 }

@@ -1,5 +1,29 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9135349957766941319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Breaks/RunVol
+  m_EditorClassIdentifier: 
+  Name: RunVol
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2592246128
+    data2: 1407875396
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-8574772416905020110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,10 +63,82 @@ MonoBehaviour:
   Path: ../../../FYPFmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638415382050300000
+  lastModified: 638416377437300000
   FileSizes:
   - Name: Desktop
-    Value: 966
+    Value: 1344
+  Exists: 1
+--- !u!114 &-7195595066125760578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Breaks/CombatBreak
+  m_EditorClassIdentifier: 
+  Name: CombatBreak
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3990727762
+    data2: 187984774
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-7086360613877326594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Run/AmbientMod
+  m_EditorClassIdentifier: 
+  Name: AmbientMod
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2603405215
+    data2: 619427970
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-6740301446007276524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CombatVol
+  m_EditorClassIdentifier: 
+  Name: CombatVol
+  StudioPath: parameter:/CombatVol
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1237919978
+    data2: 3270893961
+  Type: 0
+  IsGlobal: 1
+  Labels: []
   Exists: 1
 --- !u!114 &-6735590210168820426
 MonoBehaviour:
@@ -67,10 +163,61 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 2503718546013560883}
+  - {fileID: -2480715922463919434}
+  - {fileID: 309501878225822218}
   MinDistance: 1
   MaxDistance: 20
   Length: 37082
+--- !u!114 &-6480806696319141612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BreakVol
+  m_EditorClassIdentifier: 
+  Name: BreakVol
+  StudioPath: parameter:/BreakVol
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2627514765
+    data2: 2104267722
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-6401154503674514340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Breaks/BreakLPF
+  m_EditorClassIdentifier: 
+  Name: BreakLPF
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1070391058
+    data2: 4056269478
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-5913117967573759101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,10 +233,130 @@ MonoBehaviour:
   Path: ../../../FYPFmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638415382050300000
+  lastModified: 638416377437300000
   FileSizes:
   - Name: Desktop
-    Value: 1218
+    Value: 2026
+  Exists: 1
+--- !u!114 &-5272122157527699872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Breaks/AmbientMod
+  m_EditorClassIdentifier: 
+  Name: AmbientMod
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2603405215
+    data2: 619427970
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-5267285493095526842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Main_Break/BreakVol
+  m_EditorClassIdentifier: 
+  Name: BreakVol
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2627514765
+    data2: 2104267722
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-4553499047421316673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Breaks/CombatVol
+  m_EditorClassIdentifier: 
+  Name: CombatVol
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1237919978
+    data2: 3270893961
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-2480715922463919434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambient/RunVol
+  m_EditorClassIdentifier: 
+  Name: RunVol
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2592246128
+    data2: 1407875396
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-1199200557515432232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AmbientMod
+  m_EditorClassIdentifier: 
+  Name: AmbientMod
+  StudioPath: parameter:/AmbientMod
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2603405215
+    data2: 619427970
+  Type: 0
+  IsGlobal: 1
+  Labels: []
   Exists: 1
 --- !u!114 &-1142350749593588638
 MonoBehaviour:
@@ -118,6 +385,54 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 124081
+--- !u!114 &-1063649450963272147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BreakLPF
+  m_EditorClassIdentifier: 
+  Name: BreakLPF
+  StudioPath: parameter:/BreakLPF
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1070391058
+    data2: 4056269478
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-815199191998195281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Breaks/BreakVol
+  m_EditorClassIdentifier: 
+  Name: BreakVol
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2627514765
+    data2: 2104267722
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,14 +453,73 @@ MonoBehaviour:
   - {fileID: -6735590210168820426}
   - {fileID: -1142350749593588638}
   - {fileID: 1188778380138000985}
+  - {fileID: 2120194554033668806}
+  - {fileID: 8387968797980855877}
+  - {fileID: 127922679726352703}
   EditorParameters:
   - {fileID: -8574772416905020110}
+  - {fileID: -6480806696319141612}
+  - {fileID: -6740301446007276524}
+  - {fileID: -1199200557515432232}
+  - {fileID: -1063649450963272147}
+  - {fileID: 2469960216394948221}
   MasterBanks:
   - {fileID: -5913117967573759101}
   StringsBanks:
   - {fileID: -7413938963236584437}
-  cacheTime: 638415386141600000
+  cacheTime: 638416425065200000
   cacheVersion: 131608
+--- !u!114 &127922679726352703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Motifs/Motifs
+  m_EditorClassIdentifier: 
+  Path: event:/Motifs/Motifs
+  Guid:
+    Data1: -1593014881
+    Data2: 1329330261
+    Data3: -314359929
+    Data4: 21972454
+  Banks:
+  - {fileID: 6163710829466923879}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8000
+--- !u!114 &309501878225822218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambient/AmbientMod
+  m_EditorClassIdentifier: 
+  Name: AmbientMod
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2603405215
+    data2: 619427970
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &399131175892904098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,9 +569,87 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: 399131175892904098}
+  - {fileID: -7086360613877326594}
+  - {fileID: 6499056907100155151}
   MinDistance: 1
   MaxDistance: 20
-  Length: 10125
+  Length: 20000
+--- !u!114 &2120194554033668806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Main/Break/Main_Break
+  m_EditorClassIdentifier: 
+  Path: event:/Main/Break/Main_Break
+  Guid:
+    Data1: 129066080
+    Data2: 1154345267
+    Data3: 65467839
+    Data4: -439056851
+  Banks:
+  - {fileID: 6163710829466923879}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -5267285493095526842}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2758
+--- !u!114 &2469960216394948221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CombatBreak
+  m_EditorClassIdentifier: 
+  Name: CombatBreak
+  StudioPath: parameter:/CombatBreak
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3990727762
+    data2: 187984774
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &2503718546013560883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambient/CombatVol
+  m_EditorClassIdentifier: 
+  Name: CombatVol
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1237919978
+    data2: 3270893961
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &6163710829466923879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,8 +665,65 @@ MonoBehaviour:
   Path: ../../../FYPFmod/Build/Desktop/DemoLevel.bank
   Name: DemoLevel
   StudioPath: bank:/DemoLevel
-  lastModified: 638415386141600000
+  lastModified: 638416425065200000
   FileSizes:
   - Name: Desktop
-    Value: 9593728
+    Value: 10333760
   Exists: 1
+--- !u!114 &6499056907100155151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Run/CombatVol
+  m_EditorClassIdentifier: 
+  Name: CombatVol
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1237919978
+    data2: 3270893961
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &8387968797980855877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Breaks/Breaks
+  m_EditorClassIdentifier: 
+  Path: event:/Breaks/Breaks
+  Guid:
+    Data1: -1880688070
+    Data2: 1087737545
+    Data3: -1586807149
+    Data4: 753123600
+  Banks:
+  - {fileID: 6163710829466923879}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -9135349957766941319}
+  - {fileID: -815199191998195281}
+  - {fileID: -4553499047421316673}
+  - {fileID: -5272122157527699872}
+  - {fileID: -6401154503674514340}
+  - {fileID: -7195595066125760578}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2758

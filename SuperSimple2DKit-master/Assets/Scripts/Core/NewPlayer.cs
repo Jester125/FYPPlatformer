@@ -80,6 +80,10 @@ public class NewPlayer : PhysicsObject
     public AudioClip stepSound;
     [System.NonSerialized] public int whichHurtSound;
 
+    public bool BreakLPF = false;
+
+    public MusicControl musicScript;
+
     void Start()
     {
         Cursor.visible = false;
@@ -99,6 +103,7 @@ public class NewPlayer : PhysicsObject
     private void Update()
     {
         ComputeVelocity();
+        
     }
 
     protected void ComputeVelocity()
@@ -130,25 +135,36 @@ public class NewPlayer : PhysicsObject
             {
                 moving = true;
                 FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RunVol", 1f);
-                
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AmbientMod", 1f);
+
             }
             if (Input.GetKeyUp(KeyCode.D))
             {
                 moving = false;
                 FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RunVol", 0f);
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AmbientMod", 0f);
             }
             if (moving && speed <= 4.5)
             {
                 speed += 0.0006;
-                Debug.Log(speed);
+                //Debug.Log(speed);
                 //Debug.Log("More");
             }
             if (moving == false && speed >= 1)
             {
                 speed -= 0.004;
-                Debug.Log(speed);
+                //Debug.Log(speed);
             }
-            
+
+            if (speed >= 1.2f)
+            {
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("BreakVol", 1f);
+            }
+            else
+            {
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("BreakVol", 0f);
+            }
+
             //if (Input.GetButtonDown("d") && !jumping)
             //{
             //    speed += 0.001;
@@ -259,6 +275,9 @@ public class NewPlayer : PhysicsObject
         //If the player is not frozen (ie talking, spawning, etc), recovering, and pounding, get hurt!
         if (!frozen && !recoveryCounter.recovering && !pounding)
         {
+
+            StartCoroutine(ActivateFilter());
+            
             HurtEffect();
             cameraEffects.Shake(100, 1);
             animator.SetTrigger("hurt");
@@ -276,6 +295,8 @@ public class NewPlayer : PhysicsObject
             }
 
             GameManager.Instance.hud.HealthBarHurt();
+
+            //FMODUnity.RuntimeManager.StudioSystem.setParameterByName("BreakLPF", 0f);
         }
     }
 
@@ -316,6 +337,7 @@ public class NewPlayer : PhysicsObject
             yield return new WaitForSeconds(5f);
             GameManager.Instance.hud.animator.SetTrigger("coverScreen");
             GameManager.Instance.hud.loadSceneName = SceneManager.GetActiveScene().name;
+            musicScript.RestartEvents();
             Time.timeScale = 1f;
         }
     }
@@ -325,6 +347,7 @@ public class NewPlayer : PhysicsObject
         Freeze(true);
         dead = false;
         health = maxHealth;
+        musicScript.RestartEvents();
     }
 
     public void SubtractAmmo()
@@ -466,5 +489,35 @@ public class NewPlayer : PhysicsObject
         {
             GameManager.Instance.GetInventoryItem(cheatItems[i], null);
         }
+    }
+
+    //void OnTriggerEnter2D(Collider2D col)
+    //{
+    //    //Debug.Log("Colid");
+    //    if (col.gameObject.tag == "EnemyZone")
+    //    {
+    //        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("CombatVol", 0f);
+    //        Debug.Log("Enter!");
+    //    }
+    //}
+
+    //void OnTriggerExit2D(Collider2D col)
+    //{
+    //    if (col.gameObject.tag == "EnemyZone")
+    //    {
+    //        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("CombatVol", 1f);
+    //        Debug.Log("Leaving!");
+    //    }
+    //}
+
+    public IEnumerator ActivateFilter()
+    {
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("BreakLPF", 1f);
+        //Time.timeScale = .6f;
+        Debug.Log("hit!");
+        yield return new WaitForSeconds(2);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("BreakLPF", 0f);
+        Debug.Log("Unhit!");
+
     }
 }

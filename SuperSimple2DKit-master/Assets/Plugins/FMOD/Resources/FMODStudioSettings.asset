@@ -353,7 +353,7 @@ MonoBehaviour:
   sourceProjectPath: ../../../FYPFmod/FYPFmod.fspro
   sourceBankPath: ../../../FYPFmod/Build
   sourceBankPathUnformatted: 
-  BankRefreshCooldown: 5
+  BankRefreshCooldown: 1
   ShowBankRefreshWindow: 1
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -388,7 +388,7 @@ MonoBehaviour:
   SharedLibraryUpdateStage: 0
   SharedLibraryTimeSinceStart: 0
   CurrentVersion: 131608
-  HideSetupWizard: 0
+  HideSetupWizard: 1
   LastEventReferenceScanVersion: 131608
   Platforms:
   - {fileID: -744359664622157357}

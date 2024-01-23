@@ -48,12 +48,16 @@ public class EnemyBase : MonoBehaviour
                 health -= hitPower;
                 animator.SetTrigger("hurt");
 
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("CombatBreak", 1f);
+
                 audioSource.pitch = (1);
                 audioSource.PlayOneShot(hitSound);
+
 
                 //Ensure the enemy and also the player cannot engage in hitting each other for the max recoveryTime for each
                 recoveryCounter.counter = 0;
                 NewPlayer.Instance.recoveryCounter.counter = 0;
+                //FMODUnity.RuntimeManager.StudioSystem.setParameterByName("CombatVol", 1f);
 
                 if (NewPlayer.Instance.pounding)
                 {

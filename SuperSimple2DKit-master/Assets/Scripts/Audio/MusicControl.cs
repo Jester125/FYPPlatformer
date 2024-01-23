@@ -10,6 +10,7 @@ public class MusicControl : MonoBehaviour
     public string foley = "event:/Foley/FoleySounds";
     public string ambient = "event:/Ambient/Ambient";
     public string run = "event:/Running/Run";
+    public string breaks = "event:/Breaks/Breaks";
 
 
 
@@ -17,6 +18,7 @@ public class MusicControl : MonoBehaviour
     FMOD.Studio.EventInstance FoleyEv;
     FMOD.Studio.EventInstance AmbientEv;
     FMOD.Studio.EventInstance RunEv;
+    FMOD.Studio.EventInstance BreaksEv;
 
     // Start is called before the first frame update
     void Start()
@@ -25,16 +27,24 @@ public class MusicControl : MonoBehaviour
         FoleyEv = FMODUnity.RuntimeManager.CreateInstance(foley);
         AmbientEv = FMODUnity.RuntimeManager.CreateInstance(ambient);
         RunEv = FMODUnity.RuntimeManager.CreateInstance(run);
+        BreaksEv = FMODUnity.RuntimeManager.CreateInstance(breaks);
 
         FoleyEv.start();
         AmbientEv.start();
         RunEv.start();
+        BreaksEv.start();
     }
 
-    public void setRun ()
+    public void RestartEvents ()
     {
-        //RunEv.setParameterValue("RunVol", 1f);
+        Debug.Log("Release");
+        FoleyEv.release();
+        AmbientEv.release();
+        RunEv.release();
+        BreaksEv.release();
+        
     }
+
 
     // Update is called once per frame
     void Update()

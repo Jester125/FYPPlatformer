@@ -42,6 +42,8 @@ namespace TMPro.Examples
         private Vector3 moveVector;
         private float mouseWheel;
 
+        public NewPlayer playerScript;
+
         // Controls for Touches on Mobile devices
         //private float prev_ZoomDelta;
 
@@ -117,6 +119,22 @@ namespace TMPro.Examples
                 {
                     cameraTransform.LookAt(CameraTarget);
                 }
+
+                if (NewPlayer.Instance.speed < 1.5f)
+                {
+
+                    FollowDistance = FollowDistance - (float)NewPlayer.Instance.speed;
+                    // Limit FollowDistance between min & max values.
+                    FollowDistance = Mathf.Clamp(FollowDistance, MinFollowDistance, MaxFollowDistance);
+                }
+                else
+                {
+                    FollowDistance = FollowDistance + (float)NewPlayer.Instance.speed;
+                    // Limit FollowDistance between min & max values.
+                    FollowDistance = Mathf.Clamp(FollowDistance, MinFollowDistance, MaxFollowDistance);
+                }
+
+
 
             }
 

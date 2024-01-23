@@ -9,6 +9,8 @@ public class SceneLoadTrigger : MonoBehaviour
 
     [SerializeField] string loadSceneName;
 
+    public MusicControl musicScript;
+
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject == NewPlayer.Instance.gameObject)
@@ -17,6 +19,7 @@ public class SceneLoadTrigger : MonoBehaviour
             GameManager.Instance.inventory.Clear();
             GameManager.Instance.hud.animator.SetTrigger("coverScreen");
             enabled = false;
+            musicScript.RestartEvents();
         }
     }
 }
