@@ -48,6 +48,30 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-8233369367014443630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/YPos
+  m_EditorClassIdentifier: 
+  Name: YPos
+  StudioPath: parameter:/YPos
+  Min: -13
+  Max: 13
+  Default: -13
+  ID:
+    data1: 174132701
+    data2: 3738461180
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-7413938963236584437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,10 +87,10 @@ MonoBehaviour:
   Path: ../../../FYPFmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638416377437300000
+  lastModified: 638417228578200000
   FileSizes:
   - Name: Desktop
-    Value: 1344
+    Value: 1508
   Exists: 1
 --- !u!114 &-7195595066125760578
 MonoBehaviour:
@@ -167,6 +191,7 @@ MonoBehaviour:
   - {fileID: 2503718546013560883}
   - {fileID: -2480715922463919434}
   - {fileID: 309501878225822218}
+  - {fileID: 402766475540819997}
   MinDistance: 1
   MaxDistance: 20
   Length: 37082
@@ -218,6 +243,33 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-6062943110460684988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Drones/Walker
+  m_EditorClassIdentifier: 
+  Path: event:/Drones/Walker
+  Guid:
+    Data1: -181799527
+    Data2: 1309976836
+    Data3: -379602040
+    Data4: -1458027523
+  Banks:
+  - {fileID: 6163710829466923879}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 60597
 --- !u!114 &-5913117967573759101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,11 +285,38 @@ MonoBehaviour:
   Path: ../../../FYPFmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638416377437300000
+  lastModified: 638417228578200000
   FileSizes:
   - Name: Desktop
-    Value: 2026
+    Value: 2182
   Exists: 1
+--- !u!114 &-5892333114624407055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Drones/Flyer
+  m_EditorClassIdentifier: 
+  Path: event:/Drones/Flyer
+  Guid:
+    Data1: 403884028
+    Data2: 1334333378
+    Data3: 1867714484
+    Data4: 716559396
+  Banks:
+  - {fileID: 6163710829466923879}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 60093
 --- !u!114 &-5272122157527699872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,6 +365,33 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-4859912041473519808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ending
+  m_EditorClassIdentifier: 
+  Path: event:/Ending
+  Guid:
+    Data1: 266610695
+    Data2: 1166325142
+    Data3: -1607395924
+    Data4: 923523953
+  Banks:
+  - {fileID: 6163710829466923879}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3676
 --- !u!114 &-4553499047421316673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,6 +436,30 @@ MonoBehaviour:
   ID:
     data1: 2592246128
     data2: 1407875396
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-2072239937598698677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Run/YPos
+  m_EditorClassIdentifier: 
+  Name: YPos
+  StudioPath: 
+  Min: -13
+  Max: 13
+  Default: -13
+  ID:
+    data1: 174132701
+    data2: 3738461180
   Type: 0
   IsGlobal: 1
   Labels: []
@@ -456,6 +586,9 @@ MonoBehaviour:
   - {fileID: 2120194554033668806}
   - {fileID: 8387968797980855877}
   - {fileID: 127922679726352703}
+  - {fileID: -6062943110460684988}
+  - {fileID: -5892333114624407055}
+  - {fileID: -4859912041473519808}
   EditorParameters:
   - {fileID: -8574772416905020110}
   - {fileID: -6480806696319141612}
@@ -463,11 +596,12 @@ MonoBehaviour:
   - {fileID: -1199200557515432232}
   - {fileID: -1063649450963272147}
   - {fileID: 2469960216394948221}
+  - {fileID: -8233369367014443630}
   MasterBanks:
   - {fileID: -5913117967573759101}
   StringsBanks:
   - {fileID: -7413938963236584437}
-  cacheTime: 638416425065200000
+  cacheTime: 638417238989800000
   cacheVersion: 131608
 --- !u!114 &127922679726352703
 MonoBehaviour:
@@ -544,6 +678,30 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &402766475540819997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambient/YPos
+  m_EditorClassIdentifier: 
+  Name: YPos
+  StudioPath: 
+  Min: -13
+  Max: 13
+  Default: -13
+  ID:
+    data1: 174132701
+    data2: 3738461180
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &1188778380138000985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,6 +729,7 @@ MonoBehaviour:
   - {fileID: 399131175892904098}
   - {fileID: -7086360613877326594}
   - {fileID: 6499056907100155151}
+  - {fileID: -2072239937598698677}
   MinDistance: 1
   MaxDistance: 20
   Length: 20000
@@ -665,10 +824,10 @@ MonoBehaviour:
   Path: ../../../FYPFmod/Build/Desktop/DemoLevel.bank
   Name: DemoLevel
   StudioPath: bank:/DemoLevel
-  lastModified: 638416425065200000
+  lastModified: 638417238989800000
   FileSizes:
   - Name: Desktop
-    Value: 10333760
+    Value: 11803744
   Exists: 1
 --- !u!114 &6499056907100155151
 MonoBehaviour:

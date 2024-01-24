@@ -38,11 +38,12 @@ public class MusicControl : MonoBehaviour
     public void RestartEvents ()
     {
         Debug.Log("Release");
-        FoleyEv.release();
-        AmbientEv.release();
-        RunEv.release();
-        BreaksEv.release();
-        
+        FoleyEv.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        AmbientEv.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        RunEv.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        BreaksEv.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Ending");
+
     }
 
 

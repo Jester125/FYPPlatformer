@@ -98,12 +98,16 @@ public class NewPlayer : PhysicsObject
         graphicSprites = GetComponentsInChildren<SpriteRenderer>();
 
         SetGroundType();
+
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RunVol", 0f);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AmbientMod", 0f);
     }
 
     private void Update()
     {
         ComputeVelocity();
-        
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("YPos", transform.position.y);
+
     }
 
     protected void ComputeVelocity()
@@ -160,7 +164,7 @@ public class NewPlayer : PhysicsObject
             {
                 FMODUnity.RuntimeManager.StudioSystem.setParameterByName("BreakVol", 1f);
             }
-            else
+            else if (speed <= 1)
             {
                 FMODUnity.RuntimeManager.StudioSystem.setParameterByName("BreakVol", 0f);
             }
@@ -332,12 +336,13 @@ public class NewPlayer : PhysicsObject
             dead = true;
             deathParticles.Emit(10);
             GameManager.Instance.audioSource.PlayOneShot(deathSound);
+            musicScript.RestartEvents();
             Hide(true);
             Time.timeScale = .6f;
             yield return new WaitForSeconds(5f);
             GameManager.Instance.hud.animator.SetTrigger("coverScreen");
             GameManager.Instance.hud.loadSceneName = SceneManager.GetActiveScene().name;
-            musicScript.RestartEvents();
+            
             Time.timeScale = 1f;
         }
     }
