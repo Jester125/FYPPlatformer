@@ -296,6 +296,7 @@ public class NewPlayer : PhysicsObject
             else
             {
                 health -= hitPower;
+
             }
 
             GameManager.Instance.hud.HealthBarHurt();
