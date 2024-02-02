@@ -49,6 +49,8 @@ public class EnemyBase : MonoBehaviour
                 animator.SetTrigger("hurt");
 
                 FMODUnity.RuntimeManager.StudioSystem.setParameterByName("CombatBreak", 1f);
+                
+
 
                 audioSource.pitch = (1);
                 audioSource.PlayOneShot(hitSound);
@@ -96,6 +98,8 @@ public class EnemyBase : MonoBehaviour
             NewPlayer.Instance.PoundEffect();
         }
 
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PlayFill", 1f);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("BreakHPF", 1f);
         NewPlayer.Instance.cameraEffects.Shake(200, 1);
         health = 0;
         deathParticles.SetActive(true);

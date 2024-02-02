@@ -87,10 +87,10 @@ MonoBehaviour:
   Path: ../../../FYPFmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638417228578200000
+  lastModified: 638424961521500000
   FileSizes:
   - Name: Desktop
-    Value: 1508
+    Value: 1636
   Exists: 1
 --- !u!114 &-7195595066125760578
 MonoBehaviour:
@@ -192,6 +192,7 @@ MonoBehaviour:
   - {fileID: -2480715922463919434}
   - {fileID: 309501878225822218}
   - {fileID: 402766475540819997}
+  - {fileID: 8620774309780448585}
   MinDistance: 1
   MaxDistance: 20
   Length: 37082
@@ -243,6 +244,30 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-6247234114231089071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Motifs/BreakHPF
+  m_EditorClassIdentifier: 
+  Name: BreakHPF
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4061788322
+    data2: 2826681027
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-6062943110460684988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,10 +310,10 @@ MonoBehaviour:
   Path: ../../../FYPFmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638417228578200000
+  lastModified: 638424961521400000
   FileSizes:
   - Name: Desktop
-    Value: 2182
+    Value: 2502
   Exists: 1
 --- !u!114 &-5892333114624407055
 MonoBehaviour:
@@ -365,6 +390,36 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-5195410757307462172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Main/Main
+  m_EditorClassIdentifier: 
+  Path: event:/Main/Main
+  Guid:
+    Data1: -414964128
+    Data2: 1128666192
+    Data3: -110437188
+    Data4: -885865863
+  Banks:
+  - {fileID: 6163710829466923879}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -556743191730153938}
+  - {fileID: 2051366569272861073}
+  - {fileID: 1516009303369177901}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 21000
 --- !u!114 &-4859912041473519808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -412,6 +467,30 @@ MonoBehaviour:
   ID:
     data1: 1237919978
     data2: 3270893961
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-2971754119789065426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/FoleySounds/BreakHPF
+  m_EditorClassIdentifier: 
+  Name: BreakHPF
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4061788322
+    data2: 2826681027
   Type: 0
   IsGlobal: 1
   Labels: []
@@ -464,6 +543,30 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-1479505899426702089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Breaks/BreakHPF
+  m_EditorClassIdentifier: 
+  Name: BreakHPF
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4061788322
+    data2: 2826681027
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-1199200557515432232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,7 +614,8 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: -2971754119789065426}
   MinDistance: 1
   MaxDistance: 20
   Length: 124081
@@ -539,6 +643,30 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-941626972226899091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Motifs/CombatVol
+  m_EditorClassIdentifier: 
+  Name: CombatVol
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1237919978
+    data2: 3270893961
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-815199191998195281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,6 +687,30 @@ MonoBehaviour:
   ID:
     data1: 2627514765
     data2: 2104267722
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-556743191730153938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Main/CombatVol
+  m_EditorClassIdentifier: 
+  Name: CombatVol
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1237919978
+    data2: 3270893961
   Type: 0
   IsGlobal: 1
   Labels: []
@@ -589,6 +741,7 @@ MonoBehaviour:
   - {fileID: -6062943110460684988}
   - {fileID: -5892333114624407055}
   - {fileID: -4859912041473519808}
+  - {fileID: -5195410757307462172}
   EditorParameters:
   - {fileID: -8574772416905020110}
   - {fileID: -6480806696319141612}
@@ -597,11 +750,13 @@ MonoBehaviour:
   - {fileID: -1063649450963272147}
   - {fileID: 2469960216394948221}
   - {fileID: -8233369367014443630}
+  - {fileID: 2089662187138081914}
+  - {fileID: 9029974208591539118}
   MasterBanks:
   - {fileID: -5913117967573759101}
   StringsBanks:
   - {fileID: -7413938963236584437}
-  cacheTime: 638418612718200000
+  cacheTime: 638424990545000000
   cacheVersion: 131608
 --- !u!114 &127922679726352703
 MonoBehaviour:
@@ -626,7 +781,9 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -941626972226899091}
+  - {fileID: -6247234114231089071}
   MinDistance: 1
   MaxDistance: 20
   Length: 8000
@@ -733,6 +890,78 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 20000
+--- !u!114 &1516009303369177901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Main/BreakHPF
+  m_EditorClassIdentifier: 
+  Name: BreakHPF
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4061788322
+    data2: 2826681027
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &2051366569272861073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Main/AmbientMod
+  m_EditorClassIdentifier: 
+  Name: AmbientMod
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2603405215
+    data2: 619427970
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &2089662187138081914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayFill
+  m_EditorClassIdentifier: 
+  Name: PlayFill
+  StudioPath: parameter:/PlayFill
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2603543844
+    data2: 356007466
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &2120194554033668806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -809,6 +1038,30 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &3736426122703026095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Breaks/PlayFill
+  m_EditorClassIdentifier: 
+  Name: PlayFill
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2603543844
+    data2: 356007466
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &6163710829466923879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -824,10 +1077,10 @@ MonoBehaviour:
   Path: ../../../FYPFmod/Build/Desktop/DemoLevel.bank
   Name: DemoLevel
   StudioPath: bank:/DemoLevel
-  lastModified: 638418612718200000
+  lastModified: 638424990545000000
   FileSizes:
   - Name: Desktop
-    Value: 11803744
+    Value: 13437440
   Exists: 1
 --- !u!114 &6499056907100155151
 MonoBehaviour:
@@ -883,6 +1136,56 @@ MonoBehaviour:
   - {fileID: -5272122157527699872}
   - {fileID: -6401154503674514340}
   - {fileID: -7195595066125760578}
+  - {fileID: 3736426122703026095}
+  - {fileID: -1479505899426702089}
   MinDistance: 1
   MaxDistance: 20
   Length: 2758
+--- !u!114 &8620774309780448585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambient/BreakHPF
+  m_EditorClassIdentifier: 
+  Name: BreakHPF
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4061788322
+    data2: 2826681027
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &9029974208591539118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BreakHPF
+  m_EditorClassIdentifier: 
+  Name: BreakHPF
+  StudioPath: parameter:/BreakHPF/BreakHPF
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4061788322
+    data2: 2826681027
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
