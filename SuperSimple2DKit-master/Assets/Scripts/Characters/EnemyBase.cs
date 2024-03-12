@@ -22,6 +22,18 @@ public class EnemyBase : MonoBehaviour
     public bool isBomb;
     [SerializeField] bool requirePoundAttack; //Requires the player to use the down attack to hurt
 
+    public AttackZone zoneScript;
+
+    private static EnemyBase instance;
+    public static EnemyBase Instance
+    {
+        get
+        {
+            if (instance == null) instance = GameObject.FindObjectOfType<EnemyBase>();
+            return instance;
+        }
+    }
+
     void Start()
     {
         recoveryCounter = GetComponent<RecoveryCounter>();
@@ -98,8 +110,17 @@ public class EnemyBase : MonoBehaviour
             NewPlayer.Instance.PoundEffect();
         }
 
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PlayFill", 1f);
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("BreakHPF", 1f);
+        if (GetComponent<IamABomb>() == null) // if not a bomb
+        {
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PlayFill", 1f);
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("BreakHPF", 1f);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Breaks/Bass", this.transform.position);
+            zoneScript.EnemyCount -= 1;
+            Debug.Log(zoneScript.EnemyCount);
+        }
+
+        
+        
         NewPlayer.Instance.cameraEffects.Shake(200, 1);
         health = 0;
         deathParticles.SetActive(true);

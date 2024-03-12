@@ -8,6 +8,7 @@ TagManager:
   - PreventStuckOnWall
   - Startup
   - EnemyZone
+  - Enemy
   layers:
   - Default
   - TransparentFX

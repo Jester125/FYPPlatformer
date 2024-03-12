@@ -24638,6 +24638,7 @@ GameObject:
   - component: {fileID: 3850079973356079196}
   - component: {fileID: 6599518154359630858}
   - component: {fileID: 640254783796813702}
+  - component: {fileID: -7021600272084322817}
   m_Layer: 15
   m_Name: EnemyBomb
   m_TagString: Untagged
@@ -25003,6 +25004,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recoveryTime: 1
+--- !u!114 &-7021600272084322817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603911178760526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b68fd35bd68b4c4484727625dd6d173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1682000877541208
 GameObject:
   m_ObjectHideFlags: 0

@@ -140,6 +140,10 @@ public class NewPlayer : PhysicsObject
                 moving = true;
                 FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RunVol", 1f);
                 FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AmbientMod", 1f);
+                int stringP = Random.Range(0, 10);
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("StringPitch", stringP);
+
+
 
             }
             if (Input.GetKeyUp(KeyCode.D))
@@ -150,7 +154,7 @@ public class NewPlayer : PhysicsObject
             }
             if (moving && speed <= 4.5)
             {
-                speed += 0.0006;
+                speed += 0.0009;
                 //Debug.Log(speed);
                 //Debug.Log("More");
             }

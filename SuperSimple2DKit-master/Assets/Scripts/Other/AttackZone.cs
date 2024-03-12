@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class AttackZone : MonoBehaviour
 {
+
+    public int EnemyCount;
+    bool moreEnemies = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -11,10 +14,15 @@ public class AttackZone : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-
+        if (EnemyCount == 0)
+        {
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("CombatBreak", 0f);
+            EnemyCount = 6;
+        }
     }
+
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject == NewPlayer.Instance.gameObject)
@@ -22,7 +30,7 @@ public class AttackZone : MonoBehaviour
             
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("CombatVol", 1f);
         }
-
+        
     }
 
     void OnTriggerExit2D(Collider2D col)
@@ -33,7 +41,14 @@ public class AttackZone : MonoBehaviour
            
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("CombatVol", 0f);
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("CombatBreak", 0f);
+
         }
+        
 
     }
+
+    
+    
 }
+
+

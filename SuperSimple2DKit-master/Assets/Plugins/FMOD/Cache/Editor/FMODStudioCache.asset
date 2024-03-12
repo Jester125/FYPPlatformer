@@ -87,10 +87,10 @@ MonoBehaviour:
   Path: ../../../FYPFmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638424961521500000
+  lastModified: 638457740669600000
   FileSizes:
   - Name: Desktop
-    Value: 1636
+    Value: 2102
   Exists: 1
 --- !u!114 &-7195595066125760578
 MonoBehaviour:
@@ -268,6 +268,30 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-6075563173015938394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Run/StringPitch
+  m_EditorClassIdentifier: 
+  Name: StringPitch
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 4289077601
+    data2: 1622022342
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-6062943110460684988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,10 +334,10 @@ MonoBehaviour:
   Path: ../../../FYPFmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638424961521400000
+  lastModified: 638457740669500000
   FileSizes:
   - Name: Desktop
-    Value: 2502
+    Value: 4662
   Exists: 1
 --- !u!114 &-5892333114624407055
 MonoBehaviour:
@@ -468,6 +492,30 @@ MonoBehaviour:
     data1: 1237919978
     data2: 3270893961
   Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-3528207970752492640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/StringPitch
+  m_EditorClassIdentifier: 
+  Name: StringPitch
+  StudioPath: parameter:/StringPitch
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 4289077601
+    data2: 1622022342
+  Type: 1
   IsGlobal: 1
   Labels: []
   Exists: 1
@@ -742,6 +790,7 @@ MonoBehaviour:
   - {fileID: -5892333114624407055}
   - {fileID: -4859912041473519808}
   - {fileID: -5195410757307462172}
+  - {fileID: 504715916434892701}
   EditorParameters:
   - {fileID: -8574772416905020110}
   - {fileID: -6480806696319141612}
@@ -752,11 +801,12 @@ MonoBehaviour:
   - {fileID: -8233369367014443630}
   - {fileID: 2089662187138081914}
   - {fileID: 9029974208591539118}
+  - {fileID: -3528207970752492640}
   MasterBanks:
   - {fileID: -5913117967573759101}
   StringsBanks:
   - {fileID: -7413938963236584437}
-  cacheTime: 638425008528000000
+  cacheTime: 638458389479600000
   cacheVersion: 131608
 --- !u!114 &127922679726352703
 MonoBehaviour:
@@ -859,6 +909,34 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &504715916434892701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Breaks/Bass
+  m_EditorClassIdentifier: 
+  Path: event:/Breaks/Bass
+  Guid:
+    Data1: -252174844
+    Data2: 1230316399
+    Data3: -47343698
+    Data4: 1165199033
+  Banks:
+  - {fileID: 6163710829466923879}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 9179650077625016288}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4137
 --- !u!114 &1188778380138000985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -887,6 +965,7 @@ MonoBehaviour:
   - {fileID: -7086360613877326594}
   - {fileID: 6499056907100155151}
   - {fileID: -2072239937598698677}
+  - {fileID: -6075563173015938394}
   MinDistance: 1
   MaxDistance: 20
   Length: 20000
@@ -1077,10 +1156,10 @@ MonoBehaviour:
   Path: ../../../FYPFmod/Build/Desktop/DemoLevel.bank
   Name: DemoLevel
   StudioPath: bank:/DemoLevel
-  lastModified: 638425008528000000
+  lastModified: 638458389479600000
   FileSizes:
   - Name: Desktop
-    Value: 13437440
+    Value: 14027232
   Exists: 1
 --- !u!114 &6499056907100155151
 MonoBehaviour:
@@ -1126,7 +1205,7 @@ MonoBehaviour:
     Data4: 753123600
   Banks:
   - {fileID: 6163710829466923879}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
@@ -1140,7 +1219,7 @@ MonoBehaviour:
   - {fileID: -1479505899426702089}
   MinDistance: 1
   MaxDistance: 20
-  Length: 2758
+  Length: 4827
 --- !u!114 &8620774309780448585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1186,6 +1265,30 @@ MonoBehaviour:
     data1: 4061788322
     data2: 2826681027
   Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &9179650077625016288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bass/PlayFill
+  m_EditorClassIdentifier: 
+  Name: PlayFill
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2603543844
+    data2: 356007466
+  Type: 1
   IsGlobal: 1
   Labels: []
   Exists: 1
