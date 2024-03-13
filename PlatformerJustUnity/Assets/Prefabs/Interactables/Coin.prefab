@@ -285,6 +285,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78990bd008c84468ea41e0a71a4a781d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  midSource: {fileID: 82740274442362448}
+  highSource: {fileID: 82740274442362448}
+  highSoundz:
+  - {fileID: 8300000, guid: 8a17b09e3704b463d9dcbe0c45d91485, type: 3}
+  - {fileID: 8300000, guid: c23612d17e025456a96e7864cf9c5b8f, type: 3}
+  - {fileID: 8300000, guid: e6f4d9aa5cd1645408c1befeebe12d61, type: 3}
+  - {fileID: 8300000, guid: 1156d8987cd8c4f59bb82041a5c2d5d7, type: 3}
+  - {fileID: 8300000, guid: b6dc7039bff47409b9934451833bf449, type: 3}
+  - {fileID: 8300000, guid: c1631766fc9a245059edf07c97e3674d, type: 3}
+  - {fileID: 8300000, guid: 01e24a00385e74eb1b2939e95422f6d8, type: 3}
+  - {fileID: 8300000, guid: 5a61f84ec3d6c48dea2033cb345f4cd7, type: 3}
+  midSoundz:
+  - {fileID: 8300000, guid: cafdbc544018c4b5cb9798c55ae2426f, type: 3}
+  - {fileID: 8300000, guid: 161f41071a7674b40bfc22d3f78d52c6, type: 3}
+  - {fileID: 8300000, guid: 42f9a3b433f034b58abdf5b9176c3f48, type: 3}
+  - {fileID: 8300000, guid: 0a4be337327754a92b950d43216285ca, type: 3}
+  - {fileID: 8300000, guid: 15c9cdedbfd2740809dd6f43f7e763e6, type: 3}
+  - {fileID: 8300000, guid: 83b8e364fe3e542e3ab81f03135bdcfc, type: 3}
+  - {fileID: 8300000, guid: 0c6ac3f127cf944a5b086a2cbeee67f0, type: 3}
+  - {fileID: 8300000, guid: 46f0d33b3a21741c5ad28dbb2c5becc6, type: 3}
+  - {fileID: 8300000, guid: 1edad9b22bd4a4257a89605183ddc128, type: 3}
+  - {fileID: 8300000, guid: b85f9714f56be4d41944acb8d78afa1a, type: 3}
+  - {fileID: 8300000, guid: 9bd19c03afdef448e9328a7b02542a8d, type: 3}
+  - {fileID: 8300000, guid: 04ac1fd7195ac475487790b2e21a7a9f, type: 3}
+  - {fileID: 8300000, guid: 4d3ece67476e3474785a1784d3877aff, type: 3}
+  - {fileID: 8300000, guid: 765306268ccf44c5cb1d5ef91e2058b1, type: 3}
+  - {fileID: 8300000, guid: 7f421b6d003b64161adbbcdefce9c718, type: 3}
 --- !u!1 &1439237074007162
 GameObject:
   m_ObjectHideFlags: 0

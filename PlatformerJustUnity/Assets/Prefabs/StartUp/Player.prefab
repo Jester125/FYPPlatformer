@@ -473,6 +473,8 @@ MonoBehaviour:
   jumpParticles: {fileID: 4470067107435685217}
   pauseMenu: {fileID: 0}
   recoveryCounter: {fileID: 0}
+  myMixer: {fileID: 0}
+  runningVolume: 0
   cheatItems: []
   dead: 0
   frozen: 0

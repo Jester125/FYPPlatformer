@@ -5020,7 +5020,6 @@ GameObject:
   - component: {fileID: 114817669851517066}
   - component: {fileID: 5191033282923856645}
   - component: {fileID: 7872674092324750200}
-  - component: {fileID: 3786335205408648035}
   m_Layer: 12
   m_Name: EnemyWalker
   m_TagString: Enemy
@@ -5114,6 +5113,7 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: a6da7dd234fd74164bcdbdb0e1eb8fbc, type: 3}
   isBomb: 0
   requirePoundAttack: 0
+  zoneScript: {fileID: 0}
 --- !u!70 &70361015519134056
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5187,18 +5187,18 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243211825595574450, guid: d64a0ab1c4a0847e88be7a0768b7b584,
     type: 2}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 0.543
+  m_audioClip: {fileID: 8300000, guid: 748d7ff0b3d9141d9bf5b89391e6bb38, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.501
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 34.2
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -5355,37 +5355,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recoveryTime: 0.1
---- !u!114 &3786335205408648035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1352296235387608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -181799527
-      Data2: 1309976836
-      Data3: -379602040
-      Data4: -1458027523
-    Path: event:/Drones/Walker
-  Event: 
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &1436683220433172
 GameObject:
   m_ObjectHideFlags: 0

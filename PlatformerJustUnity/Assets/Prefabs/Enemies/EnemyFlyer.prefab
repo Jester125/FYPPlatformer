@@ -29639,7 +29639,6 @@ GameObject:
   - component: {fileID: 82198722636203156}
   - component: {fileID: 4051111764682172795}
   - component: {fileID: 3847380328143914128}
-  - component: {fileID: 2853567226547271826}
   m_Layer: 12
   m_Name: EnemyFlyer
   m_TagString: Enemy
@@ -29795,6 +29794,7 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: 1a6fff502f6fd46fbb327b10af3a4834, type: 3}
   isBomb: 0
   requirePoundAttack: 0
+  zoneScript: {fileID: 0}
 --- !u!114 &114184158737853950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29846,18 +29846,18 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243211825595574450, guid: d64a0ab1c4a0847e88be7a0768b7b584,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1e4070121a33c4ed89287879187de925, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.543
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0.79
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 34.2
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -30005,37 +30005,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2853567226547271826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1726847339308226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 403884028
-      Data2: 1334333378
-      Data3: 1867714484
-      Data4: 716559396
-    Path: event:/Drones/Flyer
-  Event: 
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &3474348562941664958
 GameObject:
   m_ObjectHideFlags: 0

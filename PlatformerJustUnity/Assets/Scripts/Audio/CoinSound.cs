@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class CoinSound : MonoBehaviour
 {
+    public GameObject midObj;
+    public GameObject highObj;
+
+    public AudioSource midSource;
+    public AudioSource highSource;
+
+
+    public AudioClip[] highSoundz;
+    public AudioClip[] midSoundz;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +31,20 @@ public class CoinSound : MonoBehaviour
         if (col.gameObject == NewPlayer.Instance.gameObject)
         {
             
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Motifs/Motifs", GetComponent<Transform>().position);
+            int high = Random.Range(0, highSoundz.Length);
+            int mid = Random.Range(0, midSoundz.Length);
+            if (!midSource.isPlaying)
+            {
+                midSource.clip = midSoundz[mid];
+                midSource.Play();
+            }
+            
+            if (!highSource.isPlaying)
+            {
+                highSource.clip = highSoundz[high];
+                highSource.Play();
+            }
+            
         }
 
     }
