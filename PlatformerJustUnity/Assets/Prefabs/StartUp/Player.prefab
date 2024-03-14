@@ -475,6 +475,10 @@ MonoBehaviour:
   recoveryCounter: {fileID: 0}
   myMixer: {fileID: 0}
   runningVolume: 0
+  runningBreak: {fileID: 0}
+  speedBreak: {fileID: 0}
+  runningBreak2: {fileID: 0}
+  speedBreak2: {fileID: 0}
   cheatItems: []
   dead: 0
   frozen: 0

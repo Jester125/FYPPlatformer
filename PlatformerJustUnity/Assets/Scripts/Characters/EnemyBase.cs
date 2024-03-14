@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Audio;
 /*The core functionality of both the EnemyFlyer and the EnemyWalker*/
 
 [RequireComponent(typeof(RecoveryCounter))]
@@ -21,6 +21,12 @@ public class EnemyBase : MonoBehaviour
     public AudioClip hitSound;
     public bool isBomb;
     [SerializeField] bool requirePoundAttack; //Requires the player to use the down attack to hurt
+    //audio
+
+    public DrumSounds drumScript;
+     
+
+
 
     public AttackZone zoneScript;
 
@@ -39,6 +45,7 @@ public class EnemyBase : MonoBehaviour
         recoveryCounter = GetComponent<RecoveryCounter>();
         audioSource = GetComponent<AudioSource>();
         animatorFunctions = GetComponent<AnimatorFunctions>();
+        
     }
 
     void Update()
@@ -112,11 +119,12 @@ public class EnemyBase : MonoBehaviour
 
         if (GetComponent<IamABomb>() == null) // if not a bomb
         {
-            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PlayFill", 1f);
+            drumScript.PlayFill();
+           
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("BreakHPF", 1f);
             FMODUnity.RuntimeManager.PlayOneShot("event:/Breaks/Bass", this.transform.position);
             zoneScript.EnemyCount -= 1;
-            Debug.Log(zoneScript.EnemyCount);
+            
         }
 
         
@@ -129,4 +137,6 @@ public class EnemyBase : MonoBehaviour
         Time.timeScale = 1f;
         Destroy(gameObject);
     }
+
+    
 }

@@ -29794,6 +29794,7 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: 1a6fff502f6fd46fbb327b10af3a4834, type: 3}
   isBomb: 0
   requirePoundAttack: 0
+  myMixer: {fileID: 24100000, guid: d64a0ab1c4a0847e88be7a0768b7b584, type: 2}
   zoneScript: {fileID: 0}
 --- !u!114 &114184158737853950
 MonoBehaviour:

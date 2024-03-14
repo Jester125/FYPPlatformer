@@ -5113,6 +5113,7 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: a6da7dd234fd74164bcdbdb0e1eb8fbc, type: 3}
   isBomb: 0
   requirePoundAttack: 0
+  myMixer: {fileID: 24100000, guid: d64a0ab1c4a0847e88be7a0768b7b584, type: 2}
   zoneScript: {fileID: 0}
 --- !u!70 &70361015519134056
 CapsuleCollider2D:

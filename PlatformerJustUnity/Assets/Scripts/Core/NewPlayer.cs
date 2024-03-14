@@ -28,6 +28,12 @@ public class NewPlayer : PhysicsObject
     //audio
     [SerializeField] private AudioMixer myMixer;
     [SerializeField] private float runningVolume = -80;
+    [SerializeField] private AudioSource runningBreak;
+    [SerializeField] private AudioSource speedBreak;
+    [SerializeField] private AudioSource runningBreak2;
+    [SerializeField] private AudioSource speedBreak2;
+    float breakVolume = 0f;
+    float StringVolume = -15f;
 
 
     // Singleton instantiation
@@ -99,14 +105,19 @@ public class NewPlayer : PhysicsObject
         origLocalScale = transform.localScale;
         recoveryCounter = GetComponent<RecoveryCounter>();
         speed = 1.0;
+
+        runningBreak.volume = 0;
+        speedBreak.volume = 0;
         
         //Find all sprites so we can hide them when the player dies.
         graphicSprites = GetComponentsInChildren<SpriteRenderer>();
 
         SetGroundType();
+        //audio
+        StartCoroutine("RunningFade", false);
+        StartCoroutine("StringFade", false);
+        StartCoroutine("BreakFade", false);
 
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RunVol", 0f);
-        myMixer.SetFloat("AmbientMod", 0f);
     }
 
     private void Update()
@@ -143,12 +154,14 @@ public class NewPlayer : PhysicsObject
             }
             if (Input.GetKeyDown(KeyCode.D))
             {
+                StopCoroutine("BreakFade");
                 StopCoroutine("RunningFade");
                 StopCoroutine("StringFade");
                 moving = true;
                 
                 StartCoroutine("StringFade", true);
                 StartCoroutine("RunningFade", true);
+                StartCoroutine("BreakFade", true);
                 int stringP = Random.Range(0, 10);
                 FMODUnity.RuntimeManager.StudioSystem.setParameterByName("StringPitch", stringP);
 
@@ -158,13 +171,16 @@ public class NewPlayer : PhysicsObject
             }
             if (Input.GetKeyUp(KeyCode.D))
             {
+
+                StopCoroutine("BreakFade");
                 StopCoroutine("RunningFade");
                 StopCoroutine("StringFade");
                 moving = false;
                 
                 StartCoroutine("RunningFade", false);
                 StartCoroutine("StringFade", false);
-                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AmbientMod", -80f);
+                StartCoroutine("BreakFade", false);
+                
             }
             if (moving && speed <= 4.5)
             {
@@ -588,26 +604,26 @@ public class NewPlayer : PhysicsObject
 
         }
     }
-    public IEnumerator StringFade(bool goingUp)
+    public IEnumerator StringFade(bool goingUp) 
     {
 
         //yield return new WaitForSeconds(4.5f);
 
         if (goingUp)
         {
-            float modulation = -20;
-            while (modulation < 0.99f)
+            
+            while (StringVolume < 4.99f)
             {
 
-                modulation = Mathf.Lerp(modulation, 1f, 1f * Time.deltaTime);
-                myMixer.SetFloat("RunningVolume", modulation);
-                Debug.Log("FadingUp!");
+                StringVolume = Mathf.Lerp(StringVolume, 5f, 1f * Time.deltaTime);
+                myMixer.SetFloat("RunningVolume", StringVolume);
+                
                 yield return 0f;
             }
-            if (modulation >= 0.99f) // had to use this as a hook to end the while loop and allow fade down
+            if (StringVolume >= 4.99f) // had to use this as a hook to end the while loop and allow fade down
             {
-                modulation = 1f;
-                myMixer.SetFloat("RunningVolume", modulation);
+                StringVolume = 5f;
+                myMixer.SetFloat("RunningVolume", StringVolume);
             }
 
         }
@@ -615,20 +631,76 @@ public class NewPlayer : PhysicsObject
 
         else // going down
         {
-            float modulation = 1f;
-            while (modulation > -19.9f)
+            
+            while (StringVolume > -14.9f)
             {
-                modulation = Mathf.Lerp(modulation, -20f, 1f * Time.deltaTime);
-                myMixer.SetFloat("RunningVolume", modulation);
-                Debug.Log("FadingDown!");
+                StringVolume = Mathf.Lerp(StringVolume, -15f, 0.5f * Time.deltaTime);
+                myMixer.SetFloat("RunningVolume", StringVolume);
+                
                 yield return 0f;
             }
-            if (modulation <= -19.9f)
+            if (StringVolume <= -14.9f)
             {
-                modulation = -20f;
-                myMixer.SetFloat("RunningVolume", modulation);
+                StringVolume = -15f;
+                myMixer.SetFloat("RunningVolume", StringVolume); 
             }
 
         }
+    }
+    public IEnumerator BreakFade(bool goingUp)
+    {
+
+        //yield return new WaitForSeconds(4.5f);
+
+        if (goingUp) // if its a fade in
+        {
+            
+            while (breakVolume < 0.99f) // while not 1
+            {
+
+                breakVolume = Mathf.Lerp(breakVolume, 1f, 0.5f * Time.deltaTime); // increase breakVolume
+                speedBreak.volume = breakVolume; // set mixer variable
+                runningBreak.volume = 1 - breakVolume;// set same value to the running break
+                speedBreak2.volume = breakVolume; // set other mixer variable
+                runningBreak2.volume = 1 - breakVolume;
+
+                yield return 0f;
+            }
+            if (breakVolume >= 0.99f) // had to use this as a hook to end the while loop and allow fade down
+            {
+                breakVolume = 1f;
+                speedBreak.volume = breakVolume;
+                runningBreak.volume = 1 - breakVolume;
+                speedBreak2.volume = breakVolume;
+                runningBreak2.volume = 1 - breakVolume;
+            }
+
+        }
+        //Time.timeScale = .6f;
+
+        else // its a fade out
+        {
+            
+            while (breakVolume > 0.01f)
+            {
+                breakVolume = Mathf.Lerp(breakVolume, 0f, 0.5f * Time.deltaTime);
+                speedBreak.volume = breakVolume;
+                runningBreak.volume = 1 - breakVolume;
+                speedBreak2.volume = breakVolume;
+                runningBreak2.volume = 1 - breakVolume;
+
+                yield return 0f;
+            }
+            if (breakVolume <= 0.01f)
+            {
+                breakVolume = 0f;
+                speedBreak.volume = breakVolume;
+                runningBreak.volume = 1 - breakVolume;
+                speedBreak2.volume = breakVolume;
+                runningBreak2.volume = 1 - breakVolume;
+            }
+        }
+
+        
     }
 }
