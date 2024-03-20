@@ -7,7 +7,7 @@ public class MixControl : MonoBehaviour
 {
 
     [SerializeField] private AudioMixer myMixer;
-    [SerializeField] private float ambientVolume = 0;
+    //[SerializeField] private float ambientVolume = 0;
 
     // Start is called before the first frame update
     void Start()

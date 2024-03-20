@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AttackZone : MonoBehaviour
 {
 
     public int EnemyCount;
     bool moreEnemies = true;
+    [SerializeField] private AudioMixer myMixer;
+
+    public DrumSounds drumScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,19 +20,20 @@ public class AttackZone : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (EnemyCount == 0)
+        if (EnemyCount == 0) // killed all enemies
         {
-            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("CombatBreak", 0f);
-            EnemyCount = 6;
+            drumScript.StopCombat();
+            EnemyCount = 6; // this is so that it doesnt affect the next combat zone
         }
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject == NewPlayer.Instance.gameObject)
+        if (col.gameObject == NewPlayer.Instance.gameObject) // when player enters
         {
-            
-            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("CombatVol", 1f);
+
+            myMixer.SetFloat("AmbientLp", 1288f);
+            myMixer.SetFloat("RunningLp", 1288f);
         }
         
     }
@@ -36,11 +41,12 @@ public class AttackZone : MonoBehaviour
     void OnTriggerExit2D(Collider2D col)
     {
 
-        if (col.gameObject == NewPlayer.Instance.gameObject)
+        if (col.gameObject == NewPlayer.Instance.gameObject) // player left the zone 
         {
-           
-            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("CombatVol", 0f);
-            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("CombatBreak", 0f);
+
+            drumScript.StopCombat();
+            myMixer.SetFloat("AmbientLp", 22000f);
+            myMixer.SetFloat("RunningLp", 22000f);
 
         }
         

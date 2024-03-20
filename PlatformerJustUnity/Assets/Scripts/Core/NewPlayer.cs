@@ -32,7 +32,7 @@ public class NewPlayer : PhysicsObject
     [SerializeField] private AudioSource speedBreak;
     [SerializeField] private AudioSource runningBreak2;
     [SerializeField] private AudioSource speedBreak2;
-    float breakVolume = 0f;
+    float breakVolume;
     float StringVolume = -15f;
 
 
@@ -108,7 +108,8 @@ public class NewPlayer : PhysicsObject
 
         runningBreak.volume = 0;
         speedBreak.volume = 0;
-        
+        breakVolume = 0f;
+
         //Find all sprites so we can hide them when the player dies.
         graphicSprites = GetComponentsInChildren<SpriteRenderer>();
 
@@ -117,7 +118,7 @@ public class NewPlayer : PhysicsObject
         StartCoroutine("RunningFade", false);
         StartCoroutine("StringFade", false);
         StartCoroutine("BreakFade", false);
-
+        myMixer.SetFloat("HurtFilter", 22000f);
     }
 
     private void Update()
@@ -550,14 +551,17 @@ public class NewPlayer : PhysicsObject
     //    }
     //}
 
-    public IEnumerator ActivateFilter()
+    public IEnumerator ActivateFilter() // when player is hit
     {
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("BreakLPF", 1f);
-        //Time.timeScale = .6f;
-   
-        yield return new WaitForSeconds(2);
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("BreakLPF", 0f);
-       
+        float filter = 1288f; // filter out the highs 
+        while (filter <= 22000f)
+        {                       // slowley incriment the variable until it reaches 22000
+            filter += 30f;
+            myMixer.SetFloat("HurtFilter", filter);
+            yield return new WaitForSeconds(0.001f);
+        }
+        
+
 
     }
 
@@ -612,17 +616,17 @@ public class NewPlayer : PhysicsObject
         if (goingUp)
         {
             
-            while (StringVolume < 4.99f)
+            while (StringVolume < 2.99f)
             {
 
-                StringVolume = Mathf.Lerp(StringVolume, 5f, 1f * Time.deltaTime);
+                StringVolume = Mathf.Lerp(StringVolume, 3f, 1f * Time.deltaTime);
                 myMixer.SetFloat("RunningVolume", StringVolume);
                 
                 yield return 0f;
             }
-            if (StringVolume >= 4.99f) // had to use this as a hook to end the while loop and allow fade down
+            if (StringVolume >= 2.99f) // had to use this as a hook to end the while loop and allow fade down
             {
-                StringVolume = 5f;
+                StringVolume = 3f;
                 myMixer.SetFloat("RunningVolume", StringVolume);
             }
 

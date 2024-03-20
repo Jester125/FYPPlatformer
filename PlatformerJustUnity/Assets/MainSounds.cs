@@ -26,18 +26,18 @@ public class MainSounds : MonoBehaviour
     {
         if (playSound)
         {
-            StartCoroutine("YieldForRandomDuration");
+            StartCoroutine("YieldForRandomDuration"); 
         }
     }
 
     IEnumerator YieldForRandomDuration()
     {
-        playSound = false;
-        float dur = Random.Range(minPossibleWait, maxPossibleWait);
-        yield return new WaitForSeconds(dur);
-        int main = Random.Range(0, mainSoundz.Length);       
-        source.clip = mainSoundz[main];
-        source.Play();
-        playSound = true;
+        playSound = false; // this stops the function being called while its running
+        float dur = Random.Range(minPossibleWait, maxPossibleWait); // choose a random time to play the sound
+        yield return new WaitForSeconds(dur); // wait that duration
+        int main = Random.Range(0, mainSoundz.Length); // choose random clip      
+        source.clip = mainSoundz[main]; // set clip
+        source.Play(); // play
+        playSound = true; // function is ready to be called again in the next update
     }
 }

@@ -24,7 +24,8 @@ public class EnemyBase : MonoBehaviour
     //audio
 
     public DrumSounds drumScript;
-     
+    public BassHits bassScript;
+
 
 
 
@@ -68,6 +69,7 @@ public class EnemyBase : MonoBehaviour
                 animator.SetTrigger("hurt");
 
                 FMODUnity.RuntimeManager.StudioSystem.setParameterByName("CombatBreak", 1f);
+                drumScript.PlayCombat();
                 
 
 
@@ -119,11 +121,9 @@ public class EnemyBase : MonoBehaviour
 
         if (GetComponent<IamABomb>() == null) // if not a bomb
         {
-            drumScript.PlayFill();
-           
-            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("BreakHPF", 1f);
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Breaks/Bass", this.transform.position);
-            zoneScript.EnemyCount -= 1;
+            drumScript.PlayFill(); // play fill
+            bassScript.PlayBass(); // play bass hit
+            zoneScript.EnemyCount -= 1; // let the enemy zone know one has died
             
         }
 

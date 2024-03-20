@@ -12,7 +12,9 @@ public class DrumSounds : MonoBehaviour
     public AudioSource[] fillSources = new AudioSource[2]; // the two different fill players
     public AudioSource[] runningSources = new AudioSource[2]; //other breaks 
     public AudioSource[] mainBreakSources = new AudioSource[2];
+    public AudioSource[] combatBreakSources = new AudioSource[2];
     [SerializeField] private AudioMixer myMixer;
+    
 
 
 
@@ -29,6 +31,7 @@ public class DrumSounds : MonoBehaviour
         nextEventTime = AudioSettings.dspTime + 4f;
         running = true;
         myMixer.SetFloat("PlayFill", -80f);
+        
 
     }
 
@@ -51,6 +54,7 @@ public class DrumSounds : MonoBehaviour
             fillSources[flip].PlayScheduled(nextEventTime); // play fill
             runningSources[flip].PlayScheduled(nextEventTime); // play break
             mainBreakSources[flip].PlayScheduled(nextEventTime); // break 2
+            combatBreakSources[flip].PlayScheduled(nextEventTime); // combat 
             nextEventTime += 60.0f / bpm * beatsPerSegment; // set next schedule time
             Debug.Log("Scheduled fill to start at time " + nextEventTime);
 
@@ -58,6 +62,20 @@ public class DrumSounds : MonoBehaviour
         }
 
     }
+
+    public void PlayCombat()
+    {
+        combatBreakSources[0].volume = 0.5f;
+        combatBreakSources[1].volume = 0.5f;
+    }
+
+    public void StopCombat()
+    {
+        combatBreakSources[0].volume = 0f;
+        combatBreakSources[1].volume = 0f;
+
+    }
+
     public void PlayFill()
     {
         StartCoroutine("FillTime");
