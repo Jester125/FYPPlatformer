@@ -1,0 +1,48 @@
+﻿<Properties StartupConfiguration="{83D96986-E0A4-34CF-1AEB-4CBB02FD0CF4}|">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b6b510cb-8d11-4f44-9a5d-7396889250ae" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Other/AttackZone.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Core/NewPlayer.cs" Line="344" Column="41" IsPinned="True" />
+      <File FileName="Assets/Scripts/Audio/CoinSound.cs" Line="21" Column="61" />
+      <File FileName="Assets/Scripts/Interaction/SceneLoadTrigger.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Characters/EnemyBase.cs" Line="119" Column="46" />
+      <File FileName="Assets/Scripts/Interaction/Breakable.cs" />
+      <File FileName="Assets/Scripts/Interaction/Collectable.cs" Line="13" Column="52" />
+      <File FileName="Assets/Scripts/Interaction/Ejector.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Interaction/DialogueTrigger.cs" Line="75" Column="51" />
+      <File FileName="Assets/Scripts/Interaction/AttackHit.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Characters/Flyer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Characters/Walker.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Core/GameManager.cs" />
+      <File FileName="Assets/Scripts/UI/HUD.cs" />
+      <File FileName="Assets/Scripts/Characters/PhysicsObject.cs" />
+      <File FileName="Assets/Scripts/Audio/MusicControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Samples/Cinemachine/2.6.0/Cinemachine Example Scenes/Shared/Scripts/PlayerMove.cs" />
+      <File FileName="Assets/Scripts/Camera/CameraEffects.cs" />
+      <File FileName="Assets/Scripts/Other/AttackZone.cs" Line="21" Column="89" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SuperSimple2DKit-master" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Audio" expanded="True" />
+                <Node name="Characters" expanded="True" />
+                <Node name="Core" expanded="True" />
+                <Node name="Interaction" expanded="True" />
+                <Node name="Other" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

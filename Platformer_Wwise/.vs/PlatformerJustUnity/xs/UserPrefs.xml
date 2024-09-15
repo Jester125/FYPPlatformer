@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{38C389A7-2AB0-B8E0-4C04-536C22A2AF63}|">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MainSounds.cs">
+    <Files>
+      <File FileName="Assets/DrumSounds.cs" Line="69" Column="45" />
+      <File FileName="Assets/Scripts/Core/Startup.cs" />
+      <File FileName="Assets/Scripts/Audio/CoinSound.cs" />
+      <File FileName="Assets/MixControl.cs" Line="24" Column="1" />
+      <File FileName="Assets/Scripts/Characters/EnemyBase.cs" Line="69" Column="45" />
+      <File FileName="Assets/Scripts/Core/NewPlayer.cs" Line="564" Column="1" />
+      <File FileName="Assets/Scripts/Other/AttackZone.cs" Line="49" Column="51" />
+      <File FileName="Assets/MusicController.cs" Line="1" Column="1" />
+      <File FileName="Assets/BassHits.cs" Line="33" Column="59" />
+      <File FileName="Assets/MainSounds.cs" Line="38" Column="79" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PlatformerJustUnity">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Audio" expanded="True" />
+                <Node name="Characters" expanded="True" />
+                <Node name="Core" expanded="True" />
+                <Node name="Other" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3b90fa0b-ea1b-46d5-b07c-f0c11e3fad3f" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

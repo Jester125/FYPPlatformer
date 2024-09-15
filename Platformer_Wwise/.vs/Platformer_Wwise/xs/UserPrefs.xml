@@ -1,0 +1,47 @@
+﻿<Properties StartupConfiguration="{D86852D7-3EB5-E0E6-7B6D-DE7524999F56}|">
+  <MonoDevelop.Ide.ItemProperties.Ak.Wwise.Api.WAAPI PreferredExecutionTarget="2d4fbe0c-1721-4aba-9627-6929e7488bc5" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Other/AttackZone.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Core/NewPlayer.cs" Line="173" Column="56" />
+      <File FileName="Assets/Scripts/Interaction/SceneLoadTrigger.cs" Line="20" Column="29" />
+      <File FileName="Assets/Scripts/Audio/MusicControl.cs" Line="45" Column="67" />
+      <File FileName="Assets/Scripts/Other/AttackZone.cs" Line="43" Column="6" />
+      <File FileName="Assets/Scripts/Characters/Walker.cs" Line="223" Column="32" />
+      <File FileName="Assets/Scripts/Audio/CoinSound.cs" Line="15" Column="39" />
+      <File FileName="Assets/DrumSounds.cs" Line="22" Column="43" />
+      <File FileName="Assets/Scripts/Characters/EnemyBase.cs" Line="75" Column="46" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Platformer_Wwise" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Audio" expanded="True" />
+                <Node name="Characters" expanded="True" />
+                <Node name="Core" expanded="True" />
+                <Node name="Interaction" expanded="True" />
+                <Node name="Other" expanded="True" />
+              </Node>
+              <Node name="Wwise" expanded="True">
+                <Node name="API" expanded="True">
+                  <Node name="Runtime" expanded="True">
+                    <Node name="Handwritten" expanded="True">
+                      <Node name="Common" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
